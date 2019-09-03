@@ -168,15 +168,52 @@ header .right-menu .signin {
 
 
 #featured .dots{
-        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
 
-#featured .circles{
-
+#featured .dots .circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#featured .circle{
-
+#featured .dots .circles .circle{
+    /*margin: 0 10px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    /*height: 8px;*/
+    /*background: white;*/
+    /*border-radius: 50%;*/
+    /*cursor: pointer;*/
+}
+#featured .dots .circles .circle .background{
+    margin: 0 10px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#featured .dots .circles .circle:hover .background{
+    width: 15px;
+    height: 15px;
+    background: #20BDF0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#featured .dots .circles .circle.active .background{
+    width: 20px;
+    height: 20px;
+    background: #20BDF0;
+    border-radius: 50%;
+    box-shadow: gray;
+    cursor: pointer;
 }
 
 
