@@ -7,13 +7,14 @@ html, body{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 30px 30px;
 
 }
 
 header .left-menu .logo{
     font-size: 2rem;
     color: white;
+    font-weight: 700;
 }
 
 header .left-menu .menu{
@@ -25,12 +26,76 @@ header .left-menu .menu{
 header .left-menu .menu a{
     color: #9BA0AA;
     text-decoration: none;
-    padding: 0 10px;
+    padding: 0 20px;
     text-transform: uppercase;
+    font-weight: 300;
 }
+
 header .left-menu{
     display: flex;
 }
 header .right-menu{
-    background: lavenderblush;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+header .right-menu .language{
+    /*display: flex;*/
+    color: #9BA0AA;
+    text-decoration: none;
+    padding: 0 60px 0 0;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+header .right-menu .signin{
+    text-transform: uppercase;
+    padding: 10px 20px;
+    width: 100%;
+    background: #1277D2;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+#featured .video{
+    background-color: white;
+    height: 326px;
+}
+#featured .videos-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr 580px 2fr 1fr;
+    grid-gap: 10px;
+}
+
+#featured .videos-section .video.center{
+    background: red;
+    width: 580px;
+    height: 326px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
