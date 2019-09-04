@@ -1,8 +1,9 @@
 @import url('./reset.css');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
 html, body {
     background: #18243A;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 body {
@@ -28,7 +29,13 @@ header {
 header .left-menu .logo {
     font-size: 2rem;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+header .left-menu .logo:hover {
+    font-weight: 800;
 }
 
 header .left-menu .menu {
@@ -39,11 +46,18 @@ header .left-menu .menu {
 }
 
 header .left-menu .menu a {
-    color: #9BA0AA;
+    color: rgba(255, 255, 255, 0.6);
+    /*color: #9BA0AA;*/
+    font-size: 1.4rem;
     text-decoration: none;
     padding: 0 20px;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+header .left-menu .menu a:hover {
+    color: rgba(255, 255, 255, 1);
 }
 
 header .left-menu {
@@ -57,23 +71,39 @@ header .right-menu {
 }
 
 header .right-menu .language {
-    /*display: flex;*/
-    color: #9BA0AA;
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     padding: 0 60px 0 0;
     text-transform: uppercase;
-    font-weight: 300;
+    font-size: 1.4rem;
+    font-weight: 400;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+header .right-menu .language:hover {
+    color: rgba(255, 255, 255, 1);
+}
+header .fa{
+    margin-left: 10px;
 }
 
 header .right-menu .signin {
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 15px 30px;
     width: 100%;
     background: #1277D2;
     color: white;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+}
+header .right-menu .signin:hover {
+    background: #4b9feb;
+
 }
 
 .container {
@@ -83,14 +113,15 @@ header .right-menu .signin {
 }
 
 #featured {
-    padding: 30px;
+    padding: 50px 0 0;
 }
 
-#featured .title {
+.section-title {
     font-size: 1.8rem;
     color: white;
     margin-bottom: 30px;
 }
+
 
 #featured .videos-section {
     display: grid;
@@ -111,6 +142,7 @@ header .right-menu .signin {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 #featured .videos-section .video.center .image {
@@ -148,7 +180,11 @@ header .right-menu .signin {
     padding: 10px;
     font-size: 4rem;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
+}
+#featured .videos-section .video:nth-child(1) .arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #featured .videos-section .video:nth-child(5) .arrow {
@@ -163,15 +199,18 @@ header .right-menu .signin {
     color: #9BF1F9;
     right: 0;
     cursor: pointer;
-
+    transition: all 0.3s ease-in-out;
 }
 
+#featured .videos-section .video:nth-child(5) .arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
 
 #featured .dots{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
 }
 
 #featured .dots .circles{
@@ -216,8 +255,98 @@ header .right-menu .signin {
     cursor: pointer;
 }
 
+#top-games .games{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    position: relative;
+}
 
 
+#top-games .games .game{
+    background: url("https://i.ytimg.com/vi/_MPBs8abPnQ/maxresdefault.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#top-games .game .info{
+    background: #293749;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    cursor: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+#top-games .game:hover .info{
+    background: #414e5e;
+}
+
+#top-games .game .info .title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#top-games .game .info .views{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9FA4AE;
+}
+
+#top-games .game .info .views .fa{
+    margin-right: 5px;
+}
+
+#top-games .games .game1{
+    background: url("https://cdn2.unrealengine.com/Fortnite%2Fvideo-recap%2F08BR_Web_Wrap-Up_Landingpage-1920x1080-b8bb845212e05934128cfb80f9fab7d7cbbf205b.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#top-games .games .game2{
+    background: url("https://i.gadgets360cdn.com/large/paladins_1528381752318.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#top-games .games .game3{
+    background: url("https://c1-ebgames.eb-cdn.com.au/merchandising/images/packshots/690971582b1a4675b0b274967899341c_Large.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#top-games .games .game4{
+    background: url("https://o.aolcdn.com/images/dims?quality=85&image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F45dbd82f35906a6e22e728dfbf4be2ad%2F205795558%2Fdestiny2-ed.jpg&client=amp-blogside-v2&signature=7fdb16973276a47dc423db2116a413534927e98b");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#top-games .games .game5{
+    background: url("https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_NewSuperMarioBrosUDeluxe_image1600w.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#top-games .games .game6{
+    background: url("https://www.thesun.co.uk/wp-content/uploads/2017/12/nintchdbpict000003603919-e1512998700685.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 
