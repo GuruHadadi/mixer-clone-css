@@ -1,7 +1,7 @@
 # Mixer Clone
 This is done just for fun. Trying to clone styling of [Mixer website](https://mixer.com)
 
-Demo link is here - [TBD]()
+Demo link is here - [Mixer-Clone](https://guruhadadi.github.io/mixer-clone-css/)
 
 
 ## Features
